@@ -2,7 +2,7 @@ import os
 
 from invoke import MockContext, Result
 
-import pytest # type: ignore
+import pytest  # type: ignore
 
 from dmdevtools.invoke_tasks import install_python_requirements, virtualenv
 
