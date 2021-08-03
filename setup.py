@@ -1,3 +1,5 @@
+ # type: ignore
+
 import re
 import ast
 import setuptools
