@@ -133,7 +133,7 @@ def test_flake8(c):
 @task(virtualenv, requirements_dev)
 def test_mypy(c):
     """Run python code linter"""
-    c.run("mypy")  # requires mypy.ini
+    c.run("mypy")  # requires mypy.ini with `files` option
 
 
 @task(virtualenv, requirements_dev, aliases=["test-unit"])
