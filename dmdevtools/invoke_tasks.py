@@ -47,11 +47,7 @@ def virtualenv(c):
 
 @task(virtualenv, aliases=["upgrade-pip"])
 def install_pip_tools(c):
-    c.run("pip install --upgrade pip wheel")
-
-    pip_sync_installed = c.run("pip show pip-tools", warn=True, hide=True).ok
-    if not pip_sync_installed:
-        c.run("pip install pip-tools")
+    c.run("pip install --upgrade pip wheel pip-tools")
 
 
 def install_python_requirements(c, dev: bool = True):
