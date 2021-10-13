@@ -4,5 +4,3 @@ flake8
 invoke>=1.5
 mypy
 pytest
-
-pip-tools
