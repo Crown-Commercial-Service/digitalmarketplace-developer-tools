@@ -17,14 +17,14 @@ with open("README.md", "r", encoding="utf-8") as f:
 setuptools.setup(
     name="digitalmarketplace-developer-tools",
     version=version,
-    url="https://github.com/alphagov/digitalmarketplace-developer-tools",
+    url="https://github.com/Crown-Commercial-Service/digitalmarketplace-developer-tools",
     license="MIT",
     author="GDS Developers",
     description="Common developer tools for Digital Marketplace repos",
     long_description=long_description,
     long_description_content_type=long_description_content_type,
     packages=setuptools.find_packages(),
-    python_requires="~=3.6",
+    python_requires="~=3.9",
     install_requires=[
         "colored",
         "invoke",
