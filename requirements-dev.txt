@@ -8,8 +8,8 @@
     # via -r requirements-dev.in
 attrs==20.3.0
     # via pytest
-colored==1.4.2
-    # via digitalmarketplace-developer-tools
+colored==2.2.3
+    # via sanitized-package
 flake8==3.8.4
     # via -r requirements-dev.in
 iniconfig==1.1.1
@@ -17,7 +17,7 @@ iniconfig==1.1.1
 invoke==1.5.0
     # via
     #   -r requirements-dev.in
-    #   digitalmarketplace-developer-tools
+    #   sanitized-package
 mccabe==0.6.1
     # via flake8
 mypy==0.812
