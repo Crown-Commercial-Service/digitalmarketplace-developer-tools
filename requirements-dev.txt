@@ -9,16 +9,16 @@
 attrs==20.3.0
     # via pytest
 colored==1.4.2
-    # via digitalmarketplace-developer-tools
-flake8==3.8.4
+    # via sanitized-package
+flake8==6.1.0
     # via -r requirements-dev.in
 iniconfig==1.1.1
     # via pytest
 invoke==1.5.0
     # via
     #   -r requirements-dev.in
-    #   digitalmarketplace-developer-tools
-mccabe==0.6.1
+    #   sanitized-package
+mccabe==0.7.0
     # via flake8
 mypy==0.812
     # via -r requirements-dev.in
@@ -30,9 +30,9 @@ pluggy==0.13.1
     # via pytest
 py==1.10.0
     # via pytest
-pycodestyle==2.6.0
+pycodestyle==2.11.1
     # via flake8
-pyflakes==2.2.0
+pyflakes==3.1.0
     # via flake8
 pyparsing==2.4.7
     # via packaging
