@@ -24,9 +24,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type=long_description_content_type,
     packages=setuptools.find_packages(),
-    python_requires="~=3.9",
+    python_requires=">=3.9,<3.13",
     install_requires=[
-        "colored",
-        "invoke",
+        "colored>=2",
+        "invoke>=2",
     ],
 )
