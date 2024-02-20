@@ -175,6 +175,12 @@ def run_app(c):
     c.run("flask run")
 
 
+@task(show_environment, virtualenv)
+def run_app_debug(c):
+    """Run app [In DEBUG mode]"""
+    c.run("flask run --debug")
+
+
 # Create collections for each kind of repo
 # This probably isn't the best way to do this,
 # but it seems to work.
@@ -192,6 +198,7 @@ _common_tasks = [
 _common_app_tasks = [
     *_common_tasks,
     run_app,
+    run_app_debug,
     docker_build,
     docker_push,
 ]
@@ -223,6 +230,7 @@ library_tasks = _Collection(
 api_app_tasks = _Collection(
     *_common_app_tasks,
     _empty_task(requirements_dev, run_app, name="run-all", doc="Build and run app"),
+    _empty_task(requirements_dev, run_app_debug, name="run-all-debug", doc="Build and run app in debug mode"),
     _empty_task(test_flake8, test_python, name="test", doc="Run all tests"),
 )
 
@@ -237,6 +245,14 @@ frontend_app_tasks = _Collection(
         run_app,
         name="run-all",
         doc="Build and run app",
+    ),
+    _empty_task(
+        requirements_dev,
+        npm_install,
+        frontend_build,
+        run_app_debug,
+        name="run-all-debug",
+        doc="Build and run app in debug mode",
     ),
     _empty_task(
         show_environment,
