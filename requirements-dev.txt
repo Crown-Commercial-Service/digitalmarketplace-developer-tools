@@ -7,7 +7,7 @@
 -e file:.
     # via -r requirements-dev.in
 colored==2.2.4
-    # via sanitized-package
+    # via digitalmarketplace-developer-tools
 exceptiongroup==1.2.0
     # via pytest
 flake8==7.0.0
@@ -17,10 +17,10 @@ iniconfig==1.1.1
 invoke==2.2.0
     # via
     #   -r requirements-dev.in
-    #   sanitized-package
+    #   digitalmarketplace-developer-tools
 mccabe==0.7.0
     # via flake8
-mypy==1.9.0
+mypy==1.10.0
     # via -r requirements-dev.in
 mypy-extensions==1.0.0
     # via mypy
