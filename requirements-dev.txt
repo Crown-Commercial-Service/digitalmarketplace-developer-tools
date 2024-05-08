@@ -26,7 +26,7 @@ mypy-extensions==1.0.0
     # via mypy
 packaging==20.9
     # via pytest
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 pycodestyle==2.11.1
     # via flake8
@@ -34,7 +34,7 @@ pyflakes==3.2.0
     # via flake8
 pyparsing==2.4.7
     # via packaging
-pytest==8.1.1
+pytest==8.2.0
     # via -r requirements-dev.in
 tomli==2.0.1
     # via
