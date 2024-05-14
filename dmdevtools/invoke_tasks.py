@@ -172,7 +172,7 @@ def docker_push(c, release_name=""):
 @task(show_environment, virtualenv)
 def run_app(c):
     """Run app"""
-    c.run("flask run")
+    c.run("flask run --debug")
 
 
 # Create collections for each kind of repo
