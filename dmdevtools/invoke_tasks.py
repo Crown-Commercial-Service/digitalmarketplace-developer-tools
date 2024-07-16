@@ -40,9 +40,10 @@ def virtualenv(c):
         # we want to be sure that we are going to use python/pip from the venv
         which_python = Path(c.run("which python", hide=True).stdout.strip())
         expected_python = c.virtual_env / "bin" / "python"
-        assert which_python.samefile(expected_python), \
-            f"expected `which python` to return {expected_python}, instead got {which_python}" \
+        assert which_python.samefile(expected_python), (
+            f"expected `which python` to return {expected_python}, instead got {which_python}"
             f"\nPATH={os.environ['PATH']}"
+        )
 
 
 @task(virtualenv, aliases=["upgrade-pip"])
@@ -127,6 +128,18 @@ def test_flake8(c):
 
 
 @task(virtualenv, requirements_dev)
+def test_black(c):
+    """Run python format checker"""
+    c.run("black --check .")
+
+
+@task(virtualenv, requirements_dev)
+def black(c):
+    """Run python formatter"""
+    c.run("black .")
+
+
+@task(virtualenv, requirements_dev)
 def test_mypy(c):
     """Run python code linter"""
     c.run("mypy")  # requires mypy.ini with `files` option
@@ -185,6 +198,8 @@ _common_tasks = [
     requirements_dev,
     freeze_requirements,
     test_flake8,
+    test_black,
+    black,
     test_mypy,
     test_python,
     show_environment,
@@ -217,13 +232,13 @@ def _empty_task(*args, name, doc=None, **kwargs):
 
 library_tasks = _Collection(
     *_common_tasks,
-    _empty_task(test_flake8, test_python, name="test", doc="Run all tests"),
+    _empty_task(test_flake8, test_black, test_python, name="test", doc="Run all tests"),
 )
 
 api_app_tasks = _Collection(
     *_common_app_tasks,
     _empty_task(requirements_dev, run_app, name="run-all", doc="Build and run app"),
-    _empty_task(test_flake8, test_python, name="test", doc="Run all tests"),
+    _empty_task(test_flake8, test_black, test_python, name="test", doc="Run all tests"),
 )
 
 frontend_app_tasks = _Collection(
@@ -242,6 +257,7 @@ frontend_app_tasks = _Collection(
         show_environment,
         frontend_build,
         test_flake8,
+        test_black,
         test_python,
         test_javascript,
         name="test",
