@@ -1,6 +1,7 @@
 -e file:.
 
 flake8
+black
 invoke>=1.5
 mypy
 pytest
