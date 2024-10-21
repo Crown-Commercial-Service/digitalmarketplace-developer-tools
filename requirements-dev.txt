@@ -20,7 +20,7 @@ invoke==2.2.0
     #   digitalmarketplace-developer-tools
 mccabe==0.7.0
     # via flake8
-mypy==1.11.2
+mypy==1.12.1
     # via -r requirements-dev.in
 mypy-extensions==1.0.0
     # via mypy
