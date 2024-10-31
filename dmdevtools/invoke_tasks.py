@@ -127,6 +127,18 @@ def test_flake8(c):
 
 
 @task(virtualenv, requirements_dev)
+def test_black(c):
+    """Run python format checker"""
+    c.run("black --check .")
+
+
+@task(virtualenv, requirements_dev)
+def black(c):
+    """Run python formatter"""
+    c.run("black .")
+
+
+@task(virtualenv, requirements_dev)
 def test_mypy(c):
     """Run python code linter"""
     c.run("mypy")  # requires mypy.ini with `files` option

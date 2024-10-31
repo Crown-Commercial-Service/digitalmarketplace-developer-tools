@@ -50,7 +50,6 @@ unrecognised goals will be sent to `invoke`.
 This project has a [pre-commit hook][pre-commit hook] to do some general file checks and check the `pyproject.toml`.
 Follow the [Quick start][pre-commit quick start] to see how to set this up in your local checkout of this project.
 
-
 ## Licence
 
 Unless stated otherwise this codebase is released under [the MIT
