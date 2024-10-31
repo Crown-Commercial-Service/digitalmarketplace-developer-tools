@@ -28,7 +28,7 @@ jobs:
 
       - name: Get package version
         id: package_version
-        run: echo "python=$(python setup.py --version)" >> $GITHUB_OUTPUT
+        run: echo "python=$(python -c 'import dmdevtools; print(dmdevtools.__version__)')" >> $GITHUB_OUTPUT
 
       - name: Check if version tag already exists
         id: version_tag
