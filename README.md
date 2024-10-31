@@ -45,6 +45,12 @@ unrecognised goals will be sent to `invoke`.
 
 [1]: http://docs.pyinvoke.org/en/stable/concepts/namespaces.html#starting-out
 
+## Pre-commit hooks
+
+This project has a [pre-commit hook][pre-commit hook] to do some general file checks and check the `pyproject.toml`.
+Follow the [Quick start][pre-commit quick start] to see how to set this up in your local checkout of this project.
+
+
 ## Licence
 
 Unless stated otherwise this codebase is released under [the MIT
@@ -60,3 +66,6 @@ the terms of the [Open Government 3.0][ogl] licence.
 
 [package]: https://pypi.org/project/digitalmarketplace-developer-tools
 [pyinvoke]: pyinvoke.org
+
+[pre-commit hook]: https://pre-commit.com/
+[pre-commit quick start]: https://pre-commit.com/#quick-start

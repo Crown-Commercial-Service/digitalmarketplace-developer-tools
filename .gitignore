@@ -6,3 +6,6 @@ build/
 dist/
 
 venv
+
+# pyenv
+.python-version
