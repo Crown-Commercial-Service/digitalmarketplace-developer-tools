@@ -197,6 +197,8 @@ _common_tasks = [
     requirements_dev,
     freeze_requirements,
     test_flake8,
+    test_black,
+    black,
     test_mypy,
     test_python,
     show_environment,
