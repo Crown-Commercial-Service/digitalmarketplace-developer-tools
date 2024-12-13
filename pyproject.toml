@@ -24,5 +24,14 @@ Repository = "https://github.com/Crown-Commercial-Service/digitalmarketplace-dev
 Issues = "https://github.com/Crown-Commercial-Service/digitalmarketplace-developer-tools/issues"
 Changelog = "https://github.com/Crown-Commercial-Service/digitalmarketplace-developer-tools/CHANGELOG.md"
 
+[project.optional-dependencies]
+dev = [
+  'flake8',
+  'black',
+  'invoke>=1.5',
+  'mypy',
+  'pytest',
+]
+
 [tool.setuptools.dynamic]
 version = {attr = "dmdevtools.__version__"}
