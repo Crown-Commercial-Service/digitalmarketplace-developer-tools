@@ -149,7 +149,7 @@ def test_mypy(c):
 @task(virtualenv, requirements_dev, aliases=["test-unit"])
 def test_python(c, pytest_args=""):
     """Run python unit tests"""
-    c.run(f"pytest {pytest_args}")
+    c.run(f"python -m pytest {pytest_args}")
 
 
 @task(frontend_build)
