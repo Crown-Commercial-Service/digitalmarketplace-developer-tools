@@ -75,6 +75,8 @@ def requirements_dev(c):
 @task(virtualenv, requirements_dev)
 def freeze_requirements(c):
     """Save python dependency tree in requirements files"""
+    if Path("pyproject.toml").exists():
+        c.run("pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml")
     if Path("requirements.in").exists():
         c.run("pip-compile requirements.in")
     if Path("requirements-dev.in").exists():
