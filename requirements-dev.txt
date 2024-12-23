@@ -6,7 +6,7 @@
 #
 black==24.10.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
-click==8.1.7
+click==8.1.8
     # via black
 colored==2.2.4
     # via digitalmarketplace-developer-tools (pyproject.toml)
