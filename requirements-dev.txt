@@ -4,7 +4,7 @@
 #
 #    pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml
 #
-black==24.10.0
+black==25.1.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
 click==8.1.8
     # via black
