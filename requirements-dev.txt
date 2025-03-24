@@ -22,7 +22,7 @@ flake8==7.1.2
     # via digitalmarketplace-developer-tools (pyproject.toml)
 identify==2.6.9
     # via pre-commit
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
 invoke==2.2.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
