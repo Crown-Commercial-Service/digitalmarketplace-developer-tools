@@ -47,7 +47,7 @@ def virtualenv(c):
 
 @task(virtualenv, aliases=["upgrade-pip"])
 def install_pip_tools(c):
-    c.run("pip install --upgrade pip wheel pip-tools")
+    c.run("pip install --upgrade pip pip-tools setuptools")
 
 
 def install_python_requirements(c, dev: bool = True):
