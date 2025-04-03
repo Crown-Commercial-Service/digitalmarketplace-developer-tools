@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2025-04-03
+
+### Fixed
+
+- Remove `wheel` from `install_pip_tools` task as it is installed by `setuptools`
+- Add `setuptools` to the `install_pip_tools` task so we have the latest version
+
 ## [1.3.1] - 2024-12-13
 
 ### Fixed
