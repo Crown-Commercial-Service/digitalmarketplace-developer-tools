@@ -152,6 +152,12 @@ def test_python(c, pytest_args=""):
     c.run(f"python -m pytest {pytest_args}")
 
 
+@task(virtualenv, requirements_dev, aliases=["test-unit-parallel"])
+def test_python_parallel(c, pytest_args=""):
+    """Run python unit tests"""
+    c.run(f"python -m pytest -n auto --maxprocesses=4 {pytest_args}")
+
+
 @task(frontend_build)
 def test_javascript(c):
     """Run node.js tests"""
@@ -203,6 +209,7 @@ _common_tasks = [
     black,
     test_mypy,
     test_python,
+    test_python_parallel,
     show_environment,
 ]
 _common_app_tasks = [
@@ -234,12 +241,14 @@ def _empty_task(*args, name, doc=None, **kwargs):
 library_tasks = _Collection(
     *_common_tasks,
     _empty_task(test_flake8, test_python, name="test", doc="Run all tests"),
+    _empty_task(test_flake8, test_python_parallel, name="test-parallel", doc="Run all tests (in parallel)"),
 )
 
 api_app_tasks = _Collection(
     *_common_app_tasks,
     _empty_task(requirements_dev, run_app, name="run-all", doc="Build and run app"),
     _empty_task(test_flake8, test_python, name="test", doc="Run all tests"),
+    _empty_task(test_flake8, test_python_parallel, name="test-parallel", doc="Run all tests (in parallel)"),
 )
 
 frontend_app_tasks = _Collection(
@@ -259,6 +268,7 @@ frontend_app_tasks = _Collection(
         frontend_build,
         test_flake8,
         test_python,
+        test_python_parallel,
         test_javascript,
         name="test",
     ),
