@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2025-04-04
+
+### Added
+
+- Updated `freeze_requirements` task to compile `pyproject.toml` for apps as well as packages
+
 ## [1.4.1] - 2025-04-03
 
 ### Fixed
