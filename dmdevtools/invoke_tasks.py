@@ -76,7 +76,11 @@ def requirements_dev(c):
 def freeze_requirements(c):
     """Save python dependency tree in requirements files"""
     if Path("pyproject.toml").exists():
-        c.run("pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml")
+        if Path("requirements.txt").exists():
+            c.run("pip-compile pyproject.toml")
+            c.run("pip-compile -c requirements.txt --extra=dev --output-file=requirements-dev.txt pyproject.toml")
+        else:
+            c.run("pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml")
     if Path("requirements.in").exists():
         c.run("pip-compile requirements.in")
     if Path("requirements-dev.in").exists():
