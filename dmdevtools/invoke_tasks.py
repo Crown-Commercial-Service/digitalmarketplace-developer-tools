@@ -268,8 +268,15 @@ frontend_app_tasks = _Collection(
         frontend_build,
         test_flake8,
         test_python,
-        test_python_parallel,
         test_javascript,
         name="test",
+    ),
+    _empty_task(
+        show_environment,
+        frontend_build,
+        test_flake8,
+        test_python_parallel,
+        test_javascript,
+        name="test-parallel",
     ),
 )
