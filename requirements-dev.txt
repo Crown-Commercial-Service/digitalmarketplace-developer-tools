@@ -63,7 +63,7 @@ tomli==2.2.1
     #   black
     #   mypy
     #   pytest
-typing-extensions==4.13.1
+typing-extensions==4.13.2
     # via
     #   black
     #   mypy
