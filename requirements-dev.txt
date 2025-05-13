@@ -67,5 +67,5 @@ typing-extensions==4.13.2
     # via
     #   black
     #   mypy
-virtualenv==20.30.0
+virtualenv==20.31.2
     # via pre-commit
