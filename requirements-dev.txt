@@ -20,7 +20,7 @@ filelock==3.18.0
     # via virtualenv
 flake8==7.2.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
-identify==2.6.10
+identify==2.6.12
     # via pre-commit
 iniconfig==2.1.0
     # via pytest
