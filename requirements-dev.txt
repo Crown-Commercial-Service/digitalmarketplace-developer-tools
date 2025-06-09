@@ -41,7 +41,9 @@ packaging==25.0
     #   black
     #   pytest
 pathspec==0.12.1
-    # via black
+    # via
+    #   black
+    #   mypy
 platformdirs==4.3.8
     # via
     #   black
@@ -54,6 +56,8 @@ pycodestyle==2.13.0
     # via flake8
 pyflakes==3.3.2
     # via flake8
+pygments==2.19.1
+    # via pytest
 pytest==8.4.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
 pyyaml==6.0.2
@@ -66,6 +70,7 @@ tomli==2.2.1
 typing-extensions==4.13.2
     # via
     #   black
+    #   exceptiongroup
     #   mypy
 virtualenv==20.31.2
     # via pre-commit
