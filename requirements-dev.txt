@@ -72,5 +72,5 @@ typing-extensions==4.14.1
     #   black
     #   exceptiongroup
     #   mypy
-virtualenv==20.33.1
+virtualenv==20.34.0
     # via pre-commit
