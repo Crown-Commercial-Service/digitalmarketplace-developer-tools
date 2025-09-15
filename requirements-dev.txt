@@ -28,7 +28,7 @@ invoke==2.2.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
 mccabe==0.7.0
     # via flake8
-mypy==1.17.1
+mypy==1.18.1
     # via digitalmarketplace-developer-tools (pyproject.toml)
 mypy-extensions==1.1.0
     # via
