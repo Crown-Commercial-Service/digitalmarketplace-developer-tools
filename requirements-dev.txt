@@ -4,7 +4,7 @@
 #
 #    pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml
 #
-black==25.1.0
+black==25.9.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
 cfgv==3.4.0
     # via pre-commit
