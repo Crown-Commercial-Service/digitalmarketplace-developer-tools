@@ -62,7 +62,7 @@ pytest==8.4.2
     # via digitalmarketplace-developer-tools (pyproject.toml)
 pyyaml==6.0.3
     # via pre-commit
-tomli==2.2.1
+tomli==2.3.0
     # via
     #   black
     #   mypy
