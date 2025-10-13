@@ -24,7 +24,7 @@ identify==2.6.15
     # via pre-commit
 iniconfig==2.1.0
     # via pytest
-invoke==2.2.0
+invoke==2.2.1
     # via digitalmarketplace-developer-tools (pyproject.toml)
 mccabe==0.7.0
     # via flake8
