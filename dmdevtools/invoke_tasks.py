@@ -235,7 +235,7 @@ def _Collection(*args, **kwargs):
 
 def _empty_task(*args, name, doc=None, **kwargs):
     """Create a task that just calls other tasks"""
-    def f(c): return None  # noqa: E731
+    f = lambda c: None  # noqa: E731
     f.__name__ = name
     if doc:
         f.__doc__ = doc
