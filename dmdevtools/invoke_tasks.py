@@ -47,7 +47,7 @@ def virtualenv(c):
 
 @task(virtualenv, aliases=["upgrade-pip"])
 def install_pip_tools(c):
-    c.run("pip install --upgrade pip pip-tools setuptools")
+    c.run("pip install --upgrade pip==24.3.1 pip-tools==7.5.1 setuptools")
 
 
 def install_python_requirements(c, dev: bool = True):
@@ -235,7 +235,7 @@ def _Collection(*args, **kwargs):
 
 def _empty_task(*args, name, doc=None, **kwargs):
     """Create a task that just calls other tasks"""
-    f = lambda c: None  # noqa: E731
+    def f(c): return None  # noqa: E731
     f.__name__ = name
     if doc:
         f.__doc__ = doc
