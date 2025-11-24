@@ -14,7 +14,7 @@ jobs:
           - '3.14'
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
 
     - name: Read Ubuntu version
       run: echo ::set-output name=UBUNTU_VERSION::$(lsb_release -r -s)
