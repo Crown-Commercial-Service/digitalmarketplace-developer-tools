@@ -66,7 +66,7 @@ pytokens==0.3.0
     # via black
 pyyaml==6.0.3
     # via pre-commit
-tomli==2.3.0
+tomli==2.4.0
     # via
     #   black
     #   mypy
