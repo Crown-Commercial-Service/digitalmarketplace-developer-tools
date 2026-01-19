@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-01-19
+
+### Added
+
+- Add task for `ruff` to replace `flake8` and `black`
+
 ## [1.6.0] - 2025-11-03
 
 ### Added

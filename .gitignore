@@ -10,3 +10,6 @@ venv
 
 # pyenv
 .python-version
+
+# ruff
+.ruff_cache
