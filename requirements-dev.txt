@@ -66,6 +66,8 @@ pytokens==0.3.0
     # via black
 pyyaml==6.0.3
     # via pre-commit
+ruff==0.14.13
+    # via digitalmarketplace-developer-tools (pyproject.toml)
 tomli==2.4.0
     # via
     #   black

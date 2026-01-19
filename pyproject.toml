@@ -28,6 +28,7 @@ Changelog = "https://github.com/Crown-Commercial-Service/digitalmarketplace-deve
 dev = [
   'flake8==7.3.0',
   'black==25.11.0',
+  'ruff==0.14.13',
   'invoke==2.2.1',
   'mypy==1.19.1',
   'pytest==8.4.2',
@@ -36,3 +37,17 @@ dev = [
 
 [tool.setuptools.dynamic]
 version = {attr = "dmdevtools.__version__"}
+
+[tool.ruff]
+line-length = 120
+
+target-version = "py39"
+
+[tool.ruff.format]
+quote-style = "single"
+
+indent-style = "space"
+
+skip-magic-trailing-comma = false
+
+line-ending = "auto"
