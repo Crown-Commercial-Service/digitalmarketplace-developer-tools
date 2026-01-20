@@ -124,24 +124,6 @@ def frontend_build(c, gulp_environment=''):
 
 
 @task(virtualenv, requirements_dev)
-def test_flake8(c):
-    """Run python code linter"""
-    c.run('flake8 .')
-
-
-@task(virtualenv, requirements_dev)
-def test_black(c):
-    """Run python format checker"""
-    c.run('black --check .')
-
-
-@task(virtualenv, requirements_dev)
-def black(c):
-    """Run python formatter"""
-    c.run('black .')
-
-
-@task(virtualenv, requirements_dev)
 def ruff(c):
     """Run ruff python code linter and formatter to fix files"""
     c.run('ruff check . --fix')
@@ -219,9 +201,6 @@ _common_tasks = [
     requirements,
     requirements_dev,
     freeze_requirements,
-    test_flake8,
-    test_black,
-    black,
     test_ruff,
     ruff,
     test_mypy,
@@ -257,19 +236,15 @@ def _empty_task(*args, name, doc=None, **kwargs):
 
 library_tasks = _Collection(
     *_common_tasks,
-    _empty_task(test_flake8, test_python, name='test', doc='Run all tests'),
-    _empty_task(test_ruff, test_python, name='test-new', doc='Run all tests'),
-    _empty_task(test_flake8, test_python_parallel, name='test-parallel', doc='Run all tests (in parallel)'),
-    _empty_task(test_ruff, test_python_parallel, name='test-parallel-new', doc='Run all tests (in parallel)'),
+    _empty_task(test_ruff, test_python, name='test', doc='Run all tests'),
+    _empty_task(test_ruff, test_python_parallel, name='test-parallel', doc='Run all tests (in parallel)'),
 )
 
 api_app_tasks = _Collection(
     *_common_app_tasks,
     _empty_task(requirements_dev, run_app, name='run-all', doc='Build and run app'),
-    _empty_task(test_flake8, test_python, name='test', doc='Run all tests'),
-    _empty_task(test_ruff, test_python, name='test-new', doc='Run all tests'),
-    _empty_task(test_flake8, test_python_parallel, name='test-parallel', doc='Run all tests (in parallel)'),
-    _empty_task(test_ruff, test_python_parallel, name='test-parallel-new', doc='Run all tests (in parallel)'),
+    _empty_task(test_ruff, test_python, name='test', doc='Run all tests'),
+    _empty_task(test_ruff, test_python_parallel, name='test-parallel', doc='Run all tests (in parallel)'),
 )
 
 frontend_app_tasks = _Collection(
@@ -287,7 +262,7 @@ frontend_app_tasks = _Collection(
     _empty_task(
         show_environment,
         frontend_build,
-        test_flake8,
+        test_ruff,
         test_python,
         test_javascript,
         name='test',
@@ -296,24 +271,8 @@ frontend_app_tasks = _Collection(
         show_environment,
         frontend_build,
         test_ruff,
-        test_python,
-        test_javascript,
-        name='test-new',
-    ),
-    _empty_task(
-        show_environment,
-        frontend_build,
-        test_flake8,
         test_python_parallel,
         test_javascript,
         name='test-parallel',
-    ),
-    _empty_task(
-        show_environment,
-        frontend_build,
-        test_ruff,
-        test_python_parallel,
-        test_javascript,
-        name='test-parallel-new',
     ),
 )
