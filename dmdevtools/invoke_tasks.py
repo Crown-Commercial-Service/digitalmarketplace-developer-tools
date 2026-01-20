@@ -314,6 +314,6 @@ frontend_app_tasks = _Collection(
         test_ruff,
         test_python_parallel,
         test_javascript,
-        name='test-parallel',
+        name='test-parallel-new',
     ),
 )
