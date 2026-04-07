@@ -1,13 +1,13 @@
 import os
 import venv
 from pathlib import Path
-from typing import List
+from typing import List, NoReturn
 
 from colored import stylize, Fore, Style
 from invoke import Collection, task
 
 
-ECHO_STYLE = Fore.LIGHT_GRAY + Style.BOLD
+ECHO_STYLE: NoReturn = Fore.LIGHT_GRAY + Style.BOLD
 
 
 os.environ.setdefault('DM_ENVIRONMENT', 'development')
