@@ -20,7 +20,7 @@ iniconfig==2.1.0
     # via pytest
 invoke==3.0.3
     # via digitalmarketplace-developer-tools (pyproject.toml)
-librt==0.8.1
+librt==0.9.0
     # via mypy
 mypy==1.19.1
     # via digitalmarketplace-developer-tools (pyproject.toml)
