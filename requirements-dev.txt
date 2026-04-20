@@ -44,7 +44,7 @@ pytest==8.4.2
     # via digitalmarketplace-developer-tools (pyproject.toml)
 pyyaml==6.0.3
     # via pre-commit
-ruff==0.15.9
+ruff==0.15.11
     # via digitalmarketplace-developer-tools (pyproject.toml)
 tomli==2.4.1
     # via
