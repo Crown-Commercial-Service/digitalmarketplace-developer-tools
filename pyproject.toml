@@ -27,7 +27,7 @@ Changelog = "https://github.com/Crown-Commercial-Service/digitalmarketplace-deve
 [project.optional-dependencies]
 dev = [
   'ruff==0.15.9',
-  'invoke==3.0.0',
+  'invoke==3.0.3',
   'mypy==1.19.1',
   'pytest==8.4.2',
   'pre-commit==4.3.0',
