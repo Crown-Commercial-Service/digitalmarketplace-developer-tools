@@ -22,7 +22,7 @@ invoke==3.0.3
     # via digitalmarketplace-developer-tools (pyproject.toml)
 librt==0.11.0
     # via mypy
-mypy==1.19.1
+mypy==2.1.0
     # via digitalmarketplace-developer-tools (pyproject.toml)
 mypy-extensions==1.1.0
     # via mypy

@@ -28,7 +28,7 @@ Changelog = "https://github.com/Crown-Commercial-Service/digitalmarketplace-deve
 dev = [
   'ruff==0.15.17',
   'invoke==3.0.3',
-  'mypy==1.19.1',
+  'mypy==2.1.0',
   'pytest==8.4.2',
   'pre-commit==4.3.0',
 ]
